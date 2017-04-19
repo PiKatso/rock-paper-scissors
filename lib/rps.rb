@@ -8,16 +8,7 @@ class String
     # input = rand(1..3)
     # input_array = []
     # input_array.push(player[input])
-    #
-    # if "scissors".beats?("paper")
-    #   true
-    # elsif "paper".beats?("rock")
-    #   true
-    # elsif "rock".beats?("scissors")
-    #   true
-    # else
-    #   false
-    # end
+
     if (self == "rock") & (second == "scissors")
       true
     elsif (self == "paper") & (second == "rock")
@@ -30,7 +21,6 @@ class String
 
   end
 end
-
 
 #HOW TO WRITE A METHOD WITH NO ARGUMENT
 # class String

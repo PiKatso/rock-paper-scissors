@@ -14,5 +14,11 @@ get('/winner') do
   comp_turn = Turn.new
   @player = player_turn.rando
   @comp = comp_turn.rando
-  erb(:winner)
+  if (@player[0].beats?(@comp[0]))
+    erb(:win1)
+  elsif (@comp[0].beats?(@player[0]))
+    erb(:win2)
+  else
+    erb(:winner)
+  end
 end

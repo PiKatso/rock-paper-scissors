@@ -1,14 +1,5 @@
 class String
   define_method :beats? do |second|
-    # player = {
-    #   1 => "scissors",
-    #   2 => "rock",
-    #   3 => "paper"
-    # }
-    # input = rand(1..3)
-    # input_array = []
-    # input_array.push(player[input])
-
     if (self == "rock") & (second == "scissors")
       true
     elsif (self == "paper") & (second == "rock")
@@ -19,6 +10,19 @@ class String
       false
     end
 
+  end
+end
+
+class Turn
+  define_method :rando do
+  player = {
+    1 => "scissors",
+    2 => "rock",
+    3 => "paper"
+  }
+  input = rand(1..3)
+  input_array = []
+  input_array.push(player[input])
   end
 end
 

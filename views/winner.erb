@@ -9,18 +9,10 @@ comp_turn = Turn.new
 <h3>Computer threw <%= @comp %></h3>
 
 
-<%
-  if @player.beats?(@comp)
-%>
+<% if @player.beats?(@comp) %>
   <h1>Player One Wins!</h1>
-<%
-  elsif @comp.beats?(@player)
-%>
+<% elsif @comp.beats?(@player) %>
   <h1>Computer Wins!</h1>
-<%
-  else
-%>
+<% else %>
   <h1>Tie!</h1>
-<%
-  end
-%>
+<% end %>

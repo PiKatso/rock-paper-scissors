@@ -9,7 +9,6 @@ class String
     else
       false
     end
-
   end
 end
 
@@ -21,14 +20,6 @@ class Turn
     3 => "paper"
   }
   input = rand(1..3)
-  input_array = []
-  input_array.push(player[input])
+  output = player[input]
   end
 end
-
-#HOW TO WRITE A METHOD WITH NO ARGUMENT
-# class String
-#   define_method :lower do
-#     self.downcase!
-#   end
-# end

@@ -1,12 +1,19 @@
 <%
-  player_turn = Turn.new
-  comp_turn = Turn.new
-  @player = player_turn.rando
-  @comp = comp_turn.rando
-  if (@player[0].beats?(@comp[0]))
+player_turn = Turn.new
+comp_turn = Turn.new
+@player = player_turn.rando
+@comp = comp_turn.rando
+%>
+
+<h3>Player 1 threw <%= @player %></h3>
+<h3>Computer threw <%= @comp %></h3>
+
+
+<%
+  if (@player.beats?(@comp))
 %> <h1>Player One Wins!</h1>
 <%
-  elsif (@comp[0].beats?(@player[0]))
+  elsif (@comp.beats?(@player))
 %> <h1>Computer Wins!</h1>
 <%
   else
